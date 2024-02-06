@@ -327,7 +327,7 @@ const loader = document.getElementById('loader')
 
 loader.addEventListener('click', loaderGenerate)
 
-const loaderProfile = () => profile('./assets/loader/loaderProfile.webp', 'loader')
+const loaderProfile = () => profile('./assets/loader/loaderProfile.webp', 'Loader')
 const loaderPassive = () => passive('./assets/loader/loaderPassive.webp', 'Scrap Barrier')
 const loaderPrimary = () => primary('./assets/loader/loaderPrimary.webp', 'Knuckleboom')
 const loaderSecondary = () => secondary('./assets/loader/loaderSecondary.webp', 'Grapple Fist')
@@ -361,6 +361,47 @@ function loaderGenerate() {
         loaderSpecial2()
     }
 }
+
+// mercenary
+const mercenary = document.getElementById('mercenary')
+
+mercenary.addEventListener('click', mercenaryGenerate)
+
+const mercenaryProfile = () => profile('./assets/mercenary/mercenaryProfile.webp', 'Mercenary')
+const mercenaryPassive = () => passive('./assets/mercenary/mercenaryPassive.webp', 'Cybernetic Enhancements')
+const mercenaryPrimary = () => primary('./assets/mercenary/mercenaryPrimary.webp', 'Laser Sword')
+const mercenarySecondary = () => secondary('./assets/mercenary/mercenarySecondary.webp', 'Whirlwind')
+const mercenarySecondary2 = () => secondary('./assets/mercenary/mercenarySecondary2.webp', 'Rising Thunder')
+const mercenaryUtility = () => utility('./assets/mercenary/mercenaryUtility.webp', 'Blinding Assault')
+const mercenaryUtility2 = () => utility('./assets/mercenary/mercenaryUtility2.webp', 'Focused Assault')
+const mercenarySpecial = () => special('./assets/mercenary/mercenarySpecial.webp', 'Eviscerate')
+const mercenarySpecial2 = () => special('./assets/mercenary/mercenarySpecial2.webp', 'Slicing Winds')
+
+function mercenaryGenerate() {
+    removeChildAbility()
+    mercenaryProfile()
+    mercenaryPassive()
+    mercenaryPrimary()
+    let secondary = Math.floor(Math.random() * 2)
+    let utility = Math.floor(Math.random() * 2)
+    let special = Math.floor(Math.random() * 2)
+    if (secondary == 0) {
+        mercenarySecondary()
+    } else {
+        mercenarySecondary2()
+    }
+    if (utility == 0) {
+        mercenaryUtility()
+    } else {
+        mercenaryUtility2()
+    }
+    if (special == 0) {
+        mercenarySpecial()
+    } else {
+        mercenarySpecial2()
+    }
+}
+
 
 
 // variables for easy element creation
