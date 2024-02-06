@@ -242,6 +242,46 @@ function commandoGenerate() {
     }
 }
 
+// engineer
+const engineer = document.getElementById('engineer')
+
+engineer.addEventListener('click', engineerGenerate)
+
+const engineerProfile = () => profile('./assets/engineer/engineerProfile.webp', 'Engineer')
+const engineerPassive = () => passive('./assets/placeholder.png', 'None')
+const engineerPrimary = () => primary('./assets/engineer/engineerPrimary.webp', 'Buncing Grenades')
+const engineerSecondary = () => secondary('./assets/engineer/engineerSecondary.webp', 'Pressure Mines')
+const engineerSecondary2 = () => secondary('./assets/engineer/engineerSecondary2.webp', 'Spider Mines')
+const engineerUtility = () => utility('./assets/engineer/engineerUtility.webp', 'Bubble Shield')
+const engineerUtility2 = () => utility('./assets/engineer/engineerUtility2.webp', 'Thermal Harpoons')
+const engineerSpecial = () => special('./assets/engineer/engineerSpecial.webp', 'TR12 Gauss Auto-Turret')
+const engineerSpecial2 = () => special('./assets/engineer/engineerSpecial2.webp', 'TR58 Carbonizer Turret')
+
+function engineerGenerate() {
+    removeChildAbility()
+    engineerProfile()
+    engineerPassive()
+    engineerPrimary()
+    let secondary = Math.floor(Math.random() * 2)
+    let utility = Math.floor(Math.random() * 2)
+    let special = Math.floor(Math.random() * 2)
+    if (secondary == 0) {
+        engineerSecondary()
+    } else {
+        engineerSecondary2()
+    }
+    if (utility == 0) {
+        engineerUtility()
+    } else {
+        engineerUtility2()
+    }
+    if (special == 0) {
+        engineerSpecial()
+    } else {
+        engineerSpecial2()
+    }
+}
+
 
 // variables for easy element creation
 const profile = (img, label) => {
