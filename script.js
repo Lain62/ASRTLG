@@ -47,7 +47,7 @@ const artificerPassive = () => passive('./assets/artificer/artificerPassive.webp
 const artificerPrimary = () => primary('./assets/artificer/artificerPrimary.webp', 'Flame Bolt')
 const artificerPrimary2 = () => primary('./assets/artificer/artificerPrimary2.webp', 'Plasma Bolt')
 const artificerSecondary = () => secondary('./assets/artificer/artificerSecondary.webp', 'Charged Nano-Bomb')
-const artificerSecondary2 = () => secondary('./assets/artificer/artificerSecondary2.webp', 'Cast Nano-Spear ')
+const artificerSecondary2 = () => secondary('./assets/artificer/artificerSecondary2.webp', 'Cast Nano-Spear')
 const artificerUtility = () => utility('./assets/artificer/artificerUtility.webp', 'Snapfreeze')
 const artificerSpecial = () => special('./assets/artificer/artificerSpecial.webp', 'Flamethrower')
 const artificerSpecial2 = () => special('./assets/artificer/artificerSpecial2.webp', 'Ion Surge')
@@ -73,6 +73,45 @@ function artificerGenerate() {
         artificerSpecial()
     } else {
         artificerSpecial2()
+    }
+}
+
+// Bandit
+const bandit = document.getElementById('bandit')
+
+bandit.addEventListener('click', banditGenerate)
+
+const banditProfile = () => profile('./assets/bandit/banditProfile.webp', 'Bandit')
+const banditPassive = () => passive('./assets/bandit/banditPassive.webp', 'Backstab')
+const banditPrimary = () => primary('./assets/bandit/banditPrimary.webp', 'Burst')
+const banditPrimary2 = () => primary('./assets/bandit/banditPrimary2.webp', 'Blast')
+const banditSecondary = () => secondary('./assets/bandit/banditSecondary.webp', 'Serated Dagger')
+const banditSecondary2 = () => secondary('./assets/bandit/banditSecondary2.webp', 'Serated Shiv')
+const banditUtility = () => utility('./assets/bandit/banditUtility.webp', 'Smoke Bomb')
+const banditSpecial = () => special('./assets/bandit/banditSpecial.webp', 'Lights out')
+const banditSpecial2 = () => special('./assets/bandit/banditSpecial2.webp', 'Desperado')
+
+function banditGenerate() {
+    banditProfile()
+    banditPassive()
+    banditUtility()
+    let primary = Math.floor(Math.random() * 2)
+    let secondary = Math.floor(Math.random() * 2)
+    let special = Math.floor(Math.random() * 2)
+    if (primary == 0) {
+        banditPrimary()
+    } else {
+        banditPrimary2()
+    }
+    if (secondary == 0) {
+        banditSecondary()
+    } else {
+        banditSecondary2()
+    }
+    if (special == 0) {
+        banditSpecial()
+    } else {
+        banditSpecial2()
     }
 }
 
