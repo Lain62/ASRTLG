@@ -322,6 +322,46 @@ function huntressGenerate() {
     }
 }
 
+// loader
+const loader = document.getElementById('loader')
+
+loader.addEventListener('click', loaderGenerate)
+
+const loaderProfile = () => profile('./assets/loader/loaderProfile.webp', 'loader')
+const loaderPassive = () => passive('./assets/loader/loaderPassive.webp', 'Scrap Barrier')
+const loaderPrimary = () => primary('./assets/loader/loaderPrimary.webp', 'Knuckleboom')
+const loaderSecondary = () => secondary('./assets/loader/loaderSecondary.webp', 'Grapple Fist')
+const loaderSecondary2 = () => secondary('./assets/loader/loaderSecondary2.webp', 'Spiked Fist')
+const loaderUtility = () => utility('./assets/loader/loaderUtility.webp', 'Charged Gauntlet')
+const loaderUtility2 = () => utility('./assets/loader/loaderUtility2.webp', 'Thunder Gauntlet')
+const loaderSpecial = () => special('./assets/loader/loaderSpecial.webp', 'M551 Pylon')
+const loaderSpecial2 = () => special('./assets/loader/loaderSpecial2.webp', 'Thunderslam')
+
+function loaderGenerate() {
+    removeChildAbility()
+    loaderProfile()
+    loaderPassive()
+    loaderPrimary()
+    let secondary = Math.floor(Math.random() * 2)
+    let utility = Math.floor(Math.random() * 2)
+    let special = Math.floor(Math.random() * 2)
+    if (secondary == 0) {
+        loaderSecondary()
+    } else {
+        loaderSecondary2()
+    }
+    if (utility == 0) {
+        loaderUtility()
+    } else {
+        loaderUtility2()
+    }
+    if (special == 0) {
+        loaderSpecial()
+    } else {
+        loaderSpecial2()
+    }
+}
+
 
 // variables for easy element creation
 const profile = (img, label) => {
