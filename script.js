@@ -202,6 +202,47 @@ function captainGenerate() {
     divAbilites.appendChild(divAbilityChild2)
 }
 
+// commando
+const commando = document.getElementById('commando')
+
+commando.addEventListener('click', commandoGenerate)
+
+const commandoProfile = () => profile('./assets/commando/commandoProfile.webp', 'Commando')
+const commandoPassive = () => passive('./assets/placeholder.png', 'None')
+const commandoPrimary = () => primary('./assets/commando/commandoPrimary.webp', 'Double Tap')
+const commandoSecondary = () => secondary('./assets/commando/commandoSecondary.webp', 'Phase Round')
+const commandoSecondary2 = () => secondary('./assets/commando/commandoSecondary2.webp', 'Phase Blast')
+const commandoUtility = () => utility('./assets/commando/commandoUtility.webp', 'Tactical Dive')
+const commandoUtility2 = () => utility('./assets/commando/commandoUtility2.webp', 'Tactical Slide')
+const commandoSpecial = () => special('./assets/commando/commandoSpecial.webp', 'Supressive Fire')
+const commandoSpecial2 = () => special('./assets/commando/commandoSpecial2.webp', 'Frag Grenade')
+
+function commandoGenerate() {
+    removeChildAbility()
+    commandoProfile()
+    commandoPassive()
+    commandoPrimary()
+    let secondary = Math.floor(Math.random() * 2)
+    let utility = Math.floor(Math.random() * 2)
+    let special = Math.floor(Math.random() * 2)
+    if (secondary == 0) {
+        commandoSecondary()
+    } else {
+        commandoSecondary2()
+    }
+    if (utility == 0) {
+        commandoUtility()
+    } else {
+        commandoUtility2()
+    }
+    if (special == 0) {
+        commandoSpecial()
+    } else {
+        commandoSpecial2()
+    }
+}
+
+
 // variables for easy element creation
 const profile = (img, label) => {
     const image = document.getElementById('char-select-img')
