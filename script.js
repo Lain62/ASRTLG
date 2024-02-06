@@ -202,7 +202,7 @@ function captainGenerate() {
     divAbilites.appendChild(divAbilityChild2)
 }
 
-// commando
+// Commando
 const commando = document.getElementById('commando')
 
 commando.addEventListener('click', commandoGenerate)
@@ -242,7 +242,7 @@ function commandoGenerate() {
     }
 }
 
-// engineer
+// Engineer
 const engineer = document.getElementById('engineer')
 
 engineer.addEventListener('click', engineerGenerate)
@@ -282,7 +282,7 @@ function engineerGenerate() {
     }
 }
 
-// huntress
+// Huntress
 const huntress = document.getElementById('huntress')
 
 huntress.addEventListener('click', huntressGenerate)
@@ -322,7 +322,7 @@ function huntressGenerate() {
     }
 }
 
-// loader
+// Loader
 const loader = document.getElementById('loader')
 
 loader.addEventListener('click', loaderGenerate)
@@ -362,7 +362,7 @@ function loaderGenerate() {
     }
 }
 
-// mercenary
+// Mercenary
 const mercenary = document.getElementById('mercenary')
 
 mercenary.addEventListener('click', mercenaryGenerate)
@@ -399,6 +399,58 @@ function mercenaryGenerate() {
         mercenarySpecial()
     } else {
         mercenarySpecial2()
+    }
+}
+
+// Mul-T
+const mult = document.getElementById('mult')
+
+mult.addEventListener('click', multGenerate)
+
+const multProfile = () => profile('./assets/mult/multProfile.webp', 'mult')
+const multPrimaryChild = () => passive('./assets/mult/multPrimaryChild.webp', 'Auto-Nailgun')
+const multPrimaryChild2 = () => passive('./assets/mult/multPrimaryChild2.webp', 'Rebar Puncher')
+const multPrimaryChild3 = () => passive('./assets/mult/multPrimaryChild3.webp', 'Scrap Launcher')
+const multPrimaryChild4 = () => passive('./assets/mult/multPrimaryChild4.webp', 'Power-Saw')
+const multPrimary2Child = () => primary('./assets/mult/multPrimaryChild.webp', 'Auto-Nailgun')
+const multPrimary2Child2 = () => primary('./assets/mult/multPrimaryChild2.webp', 'Rebar Puncher')
+const multPrimary2Child3 = () => primary('./assets/mult/multPrimaryChild3.webp', 'Scrap Launcher')
+const multPrimary2Child4 = () => primary('./assets/mult/multPrimaryChild4.webp', 'Power-Saw')
+const multSecondary = () => secondary('./assets/mult/multSecondary.webp', 'Blast Canister')
+const multUtility = () => utility('./assets/mult/multUtility.webp', 'Transport Mode')
+const multSpecial = () => special('./assets/mult/multSpecial.webp', 'Retool')
+const multSpecial2 = () => special('./assets/mult/multSpecial2.webp', 'Power Mode')
+
+function multGenerate() {
+    removeChildAbility()
+    multProfile()
+    multSecondary()
+    multUtility()
+    let primary = Math.floor(Math.random() * 4)
+    let primary2 = Math.floor(Math.random() * 4)
+    let special = Math.floor(Math.random() * 2)
+    if (primary == 0) {
+        multPrimaryChild()
+    } else if (primary == 1) {
+        multPrimaryChild2()
+    } else if (primary == 2) {
+        multPrimaryChild3()
+    } else {
+        multPrimaryChild4()
+    }
+    if (primary2 == 0) {
+        multPrimary2Child()
+    } else if (primary2 == 1) {
+        multPrimary2Child2()
+    } else if (primary2 == 2) {
+        multPrimary2Child3()
+    } else {
+        multPrimary2Child4()
+    }
+    if (special == 0) {
+        multSpecial()
+    } else {
+        multSpecial2()
     }
 }
 
