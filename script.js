@@ -282,6 +282,46 @@ function engineerGenerate() {
     }
 }
 
+// huntress
+const huntress = document.getElementById('huntress')
+
+huntress.addEventListener('click', huntressGenerate)
+
+const huntressProfile = () => profile('./assets/huntress/huntressProfile.webp', 'Huntress')
+const huntressPassive = () => passive('./assets/placeholder.png', 'None')
+const huntressPrimary = () => primary('./assets/huntress/huntressPrimary.webp', 'Strafe')
+const huntressPrimary2 = () => primary('./assets/huntress/huntressPrimary2.webp', 'Flurry')
+const huntressSecondary = () => secondary('./assets/huntress/huntressSecondary.webp', 'Laser Glaive')
+const huntressUtility = () => utility('./assets/huntress/huntressUtility.webp', 'Blink')
+const huntressUtility2 = () => utility('./assets/huntress/huntressUtility2.webp', 'Phase Blink')
+const huntressSpecial = () => special('./assets/huntress/huntressSpecial.webp', 'Arrow Rain')
+const huntressSpecial2 = () => special('./assets/huntress/huntressSpecial2.webp', 'Ballista')
+
+function huntressGenerate() {
+    removeChildAbility()
+    huntressProfile()
+    huntressPassive()
+    huntressSecondary()
+    let primary = Math.floor(Math.random() * 2)
+    let utility = Math.floor(Math.random() * 2)
+    let special = Math.floor(Math.random() * 2)
+    if (primary == 0) {
+        huntressPrimary()
+    } else {
+        huntressPrimary()
+    }
+    if (utility == 0) {
+        huntressUtility()
+    } else {
+        huntressUtility2()
+    }
+    if (special == 0) {
+        huntressSpecial()
+    } else {
+        huntressSpecial2()
+    }
+}
+
 
 // variables for easy element creation
 const profile = (img, label) => {
