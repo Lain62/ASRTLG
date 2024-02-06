@@ -38,6 +38,43 @@ function acridGenerate() {
 }
 
 // Artificer
+const artificer = document.getElementById('artificer')
+
+artificer.addEventListener('click', artificerGenerate)
+
+const artificerProfile = () => profile('./assets/artificer/artificerProfile.webp', 'Artificer')
+const artificerPassive = () => passive('./assets/artificer/artificerPassive.webp', 'ENV Suit')
+const artificerPrimary = () => primary('./assets/artificer/artificerPrimary.webp', 'Flame Bolt')
+const artificerPrimary2 = () => primary('./assets/artificer/artificerPrimary2.webp', 'Plasma Bolt')
+const artificerSecondary = () => secondary('./assets/artificer/artificerSecondary.webp', 'Charged Nano-Bomb')
+const artificerSecondary2 = () => secondary('./assets/artificer/artificerSecondary2.webp', 'Cast Nano-Spear ')
+const artificerUtility = () => utility('./assets/artificer/artificerUtility.webp', 'Snapfreeze')
+const artificerSpecial = () => special('./assets/artificer/artificerSpecial.webp', 'Flamethrower')
+const artificerSpecial2 = () => special('./assets/artificer/artificerSpecial2.webp', 'Ion Surge')
+
+function artificerGenerate() {
+    artificerProfile()
+    artificerPassive()
+    artificerUtility()
+    let primary = Math.floor(Math.random() * 2)
+    let secondary = Math.floor(Math.random() * 2)
+    let special = Math.floor(Math.random() * 2)
+    if (primary == 0) {
+        artificerPrimary()
+    } else {
+        artificerPrimary2()
+    }
+    if (secondary == 0) {
+        artificerSecondary()
+    } else {
+        artificerSecondary2()
+    }
+    if (special == 0) {
+        artificerSpecial()
+    } else {
+        artificerSpecial2()
+    }
+}
 
 // variables for easy element creation
 const profile = (img, label) => {
