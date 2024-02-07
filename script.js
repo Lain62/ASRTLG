@@ -18,6 +18,7 @@ const btnMult = document.getElementById('mult')
 const btnRailgunner = document.getElementById('railgunner')
 const btnRex = document.getElementById('rex')
 const btnVoidfiend = document.getElementById('voidfiend')
+const btnRandom = document.getElementById('random')
 
 btnAcrid.addEventListener('click', generateAcrid)
 btnArtificer.addEventListener('click', generateArtificer)
@@ -32,6 +33,55 @@ btnMult.addEventListener('click', generateMult)
 btnRailgunner.addEventListener('click', generateRailgunner)
 btnRex.addEventListener('click', generateRex)
 btnVoidfiend.addEventListener('click', generateVoidfiend)
+btnRandom.addEventListener('click', generateRandom)
+
+function generateRandom() {
+    option = Math.floor(Math.random() * 13)
+    console.log(option)
+
+    switch (option) {
+        case 0:
+            generateAcrid()
+        case 1:
+            generateArtificer()
+            break
+        case 2:
+            generateBandit()
+            break
+        case 3:
+            generateCaptain()
+            break
+        case 4:
+            generateCommando()
+            break
+        case 5:
+            generateEngineer()
+            break
+        case 6:
+            generateHuntress()
+            break
+        case 7:
+            generateLoader()
+            break
+        case 8:
+            generateMercenary()
+            break
+        case 9:
+            generateMult()
+            break
+        case 10:
+            generateRailgunner()
+            break
+        case 11:
+            generateRex()
+            break
+        case 12:
+            generateVoidfiend()
+            break
+        default:
+            break
+    }
+}
 
 function generateAcrid() {
     clear()
