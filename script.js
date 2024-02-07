@@ -15,6 +15,9 @@ const btnHuntress = document.getElementById('huntress')
 const btnLoader = document.getElementById('loader')
 const btnMercenary = document.getElementById('mercenary')
 const btnMult = document.getElementById('mult')
+const btnRailgunner = document.getElementById('railgunner')
+const btnRex = document.getElementById('rex')
+const btnVoidfiend = document.getElementById('voidfiend')
 
 btnAcrid.addEventListener('click', generateAcrid)
 btnArtificer.addEventListener('click', generateArtificer)
@@ -26,6 +29,9 @@ btnHuntress.addEventListener('click', generateHuntress)
 btnLoader.addEventListener('click', generateLoader)
 btnMercenary.addEventListener('click', generateMercenary)
 btnMult.addEventListener('click', generateMult)
+btnRailgunner.addEventListener('click', generateRailgunner)
+btnRex.addEventListener('click', generateRex)
+btnVoidfiend.addEventListener('click', generateVoidfiend)
 
 function generateAcrid() {
     clear()
@@ -253,7 +259,7 @@ function generateMercenary() {
 
 function generateMult() {
     clear()
-    newProfile("./assets/mult/multProfile.webp", "mult")
+    newProfile("./assets/mult/multProfile.webp", "Mul-T")
     option = Math.floor(Math.random() * 4)
     option2 = Math.floor(Math.random() * 4)
     option3 = Math.floor(Math.random() * 2)
@@ -281,6 +287,59 @@ function generateMult() {
     } else if (option3 == 1) {
         newOpt("./assets/mult/multOption2Alt.webp", "Power Mode")
     }
+}
+
+function generateRailgunner() {
+    clear()
+    newProfile("./assets/railgunner/railgunnerProfile.webp", "Railgunner")
+    option = Math.floor(Math.random() * 2)
+    option2 = Math.floor(Math.random() * 2)
+    option3 = Math.floor(Math.random() * 2)
+
+    if (option == 0) {
+        newOpt("./assets/railgunner/railgunnerOption.webp", "M99 Sniper")
+    } else if (option == 1) {
+        newOpt("./assets/railgunner/railgunnerOptionAlt.webp", "HH44 Marksman")
+    }
+    if (option2 == 0) {
+        newOpt("./assets/railgunner/railgunnerOption2.webp", "Concussion Device")
+    } else if (option2 == 1) {
+        newOpt("./assets/railgunner/railgunnerOption2Alt.webp", "Polar Field Device")
+    }
+    if (option3 == 0) {
+        newOpt("./assets/railgunner/railgunnerOption3.webp", "Supercharge")
+    } else if (option3 == 1) {
+        newOpt("./assets/railgunner/railgunnerOption3Alt.webp", "Cryocharge")
+    }
+}
+
+function generateRex() {
+    clear()
+    newProfile("./assets/rex/rexProfile.webp", "REX")
+    option = Math.floor(Math.random() * 2)
+    option2 = Math.floor(Math.random() * 2)
+    option3 = Math.floor(Math.random() * 2)
+
+    if (option == 0) {
+        newOpt("./assets/rex/rexOption.webp", "DIRECTIVE : Drill")
+    } else if (option == 1) {
+        newOpt("./assets/rex/rexOptionAlt.webp", "Seed Barrage")
+    }
+    if (option2 == 0) {
+        newOpt("./assets/rex/rexOption2.webp", "DIRECTIVE: Disperse")
+    } else if (option2 == 1) {
+        newOpt("./assets/rex/rexOption2Alt.webp", "Bramble Volley")
+    }
+    if (option3 == 0) {
+        newOpt("./assets/rex/rexOption3.webp", "DIRECTIVE: Harvest")
+    } else if (option3 == 1) {
+        newOpt("./assets/rex/rexOption3Alt.webp", "Tangling Growth")
+    }
+}
+
+function generateVoidfiend() {
+    clear()
+    newProfile("./assets/voidfiend/voidfiendProfile.webp", "Void Fiend")
 }
 
 function newProfile(img, label) {
