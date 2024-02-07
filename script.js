@@ -9,11 +9,19 @@ const btnAcrid = document.getElementById('acrid')
 const btnArtificer = document.getElementById('artificer')
 const btnBandit = document.getElementById('bandit')
 const btnCaptain = document.getElementById('captain')
+const btnCommando = document.getElementById('commando')
+const btnEngineer = document.getElementById('engineer')
+const btnHuntress = document.getElementById('huntress')
+const btnLoader = document.getElementById('loader')
 
 btnAcrid.addEventListener('click', generateAcrid)
 btnArtificer.addEventListener('click', generateArtificer)
 btnBandit.addEventListener('click', generateBandit)
 btnCaptain.addEventListener('click', generateCaptain)
+btnCommando.addEventListener('click', generateCommando)
+btnEngineer.addEventListener('click', generateEngineer)
+btnHuntress.addEventListener('click', generateHuntress)
+btnLoader.addEventListener('click', generateLoader)
 
 function generateAcrid() {
     clear()
@@ -116,6 +124,102 @@ function generateCaptain() {
         newOpt("./assets/captain/captainOption2.webp", "Orbital Probe")
     } else if (option3 == 1) {
         newOpt("./assets/captain/captainOption2Alt.webp", "OGM-72 \'DIABLO\' Strike")
+    }
+}
+
+function generateCommando() {
+    clear()
+    newProfile("./assets/commando/commandoProfile.webp", "Commando")
+    option = Math.floor(Math.random() * 2)
+    option2 = Math.floor(Math.random() * 2)
+    option3 = Math.floor(Math.random() * 2)
+
+    if (option == 0) {
+        newOpt("./assets/commando/commandoOption.webp", "Phase Round")
+    } else if (option == 1) {
+        newOpt("./assets/commando/commandoOptionAlt.webp", "Phase Blast")
+    }
+    if (option2 == 0) {
+        newOpt("./assets/commando/commandoOption2.webp", "Tactical Dive")
+    } else if (option2 == 1) {
+        newOpt("./assets/commando/commandoOption2Alt.webp", "Tactical Slide")
+    }
+    if (option3 == 0) {
+        newOpt("./assets/commando/commandoOption3.webp", "Supressive Fire")
+    } else if (option3 == 1) {
+        newOpt("./assets/commando/commandoOption3Alt.webp", "Frag Grenade")
+    }
+}
+
+function generateEngineer() {
+    clear()
+    newProfile("./assets/engineer/engineerProfile.webp", "Engineer")
+    option = Math.floor(Math.random() * 2)
+    option2 = Math.floor(Math.random() * 2)
+    option3 = Math.floor(Math.random() * 2)
+
+    if (option == 0) {
+        newOpt("./assets/engineer/engineerOption.webp", "Pressure Mines")
+    } else if (option == 1) {
+        newOpt("./assets/engineer/engineerOptionAlt.webp", "Spider Mines")
+    }
+    if (option2 == 0) {
+        newOpt("./assets/engineer/engineerOption2.webp", "Bubble Shield")
+    } else if (option2 == 1) {
+        newOpt("./assets/engineer/engineerOption2Alt.webp", "Thermal Harpoons")
+    }
+    if (option3 == 0) {
+        newOpt("./assets/engineer/engineerOption3.webp", "TR12 Gauss Auto-Turret")
+    } else if (option3 == 1) {
+        newOpt("./assets/engineer/engineerOption3Alt.webp", "TR58 Carbonizer Turret")
+    }
+}
+
+function generateHuntress() {
+    clear()
+    newProfile("./assets/huntress/huntressProfile.webp", "Huntress")
+    option = Math.floor(Math.random() * 2)
+    option2 = Math.floor(Math.random() * 2)
+    option3 = Math.floor(Math.random() * 2)
+
+    if (option == 0) {
+        newOpt("./assets/huntress/huntressOption.webp", "Strafe")
+    } else if (option == 1) {
+        newOpt("./assets/huntress/huntressOptionAlt.webp", "Flurry")
+    }
+    if (option2 == 0) {
+        newOpt("./assets/huntress/huntressOption2.webp", "Blink")
+    } else if (option2 == 1) {
+        newOpt("./assets/huntress/huntressOption2Alt.webp", "Phase Blink")
+    }
+    if (option3 == 0) {
+        newOpt("./assets/huntress/huntressOption3.webp", "Arrow Rain")
+    } else if (option3 == 1) {
+        newOpt("./assets/huntress/huntressOption3Alt.webp", "Ballista")
+    }
+}
+
+function generateLoader() {
+    clear()
+    newProfile("./assets/loader/loaderProfile.webp", "Loader")
+    option = Math.floor(Math.random() * 2)
+    option2 = Math.floor(Math.random() * 2)
+    option3 = Math.floor(Math.random() * 2)
+
+    if (option == 0) {
+        newOpt("./assets/loader/loaderOption.webp", "Grapple Fist")
+    } else if (option == 1) {
+        newOpt("./assets/loader/loaderOptionAlt.webp", "Spiked Fist")
+    }
+    if (option2 == 0) {
+        newOpt("./assets/loader/loaderOption2.webp", "Charged Gauntlet")
+    } else if (option2 == 1) {
+        newOpt("./assets/loader/loaderOption2Alt.webp", "Thunder Gauntlet")
+    }
+    if (option3 == 0) {
+        newOpt("./assets/loader/loaderOption3.webp", "M551 Pylon")
+    } else if (option3 == 1) {
+        newOpt("./assets/loader/loaderOption3Alt.webp", "Thunderslam")
     }
 }
 
