@@ -7,9 +7,13 @@ const divOptions = document.getElementById('selected-options')
 
 const btnAcrid = document.getElementById('acrid')
 const btnArtificer = document.getElementById('artificer')
+const btnBandit = document.getElementById('bandit')
+const btnCaptain = document.getElementById('captain')
 
 btnAcrid.addEventListener('click', generateAcrid)
 btnArtificer.addEventListener('click', generateArtificer)
+btnBandit.addEventListener('click', generateBandit)
+btnCaptain.addEventListener('click', generateCaptain)
 
 function generateAcrid() {
     clear()
@@ -37,7 +41,7 @@ function generateAcrid() {
 
 function generateArtificer() {
     clear()
-    newProfile("./assets/artificer/artificerProfile.webp", "artificer")
+    newProfile("./assets/artificer/ArtificerProfile.webp", "Artificer")
     option = Math.floor(Math.random() * 2)
     option2 = Math.floor(Math.random() * 2)
     option3 = Math.floor(Math.random() * 2)
@@ -56,6 +60,62 @@ function generateArtificer() {
         newOpt("./assets/artificer/artificerOption3.webp", "Flamethrower")
     } else if (option3 == 1) {
         newOpt("./assets/artificer/artificerOption3Alt.webp", "Ion Surge")
+    }
+}
+
+function generateBandit() {
+    clear()
+    newProfile("./assets/bandit/banditProfile.webp", "Bandit")
+    option = Math.floor(Math.random() * 2)
+    option2 = Math.floor(Math.random() * 2)
+    option3 = Math.floor(Math.random() * 2)
+
+    if (option == 0) {
+        newOpt("./assets/bandit/banditOption.webp", "Burst")
+    } else if (option == 1) {
+        newOpt("./assets/bandit/banditOptionAlt.webp", "Blast")
+    }
+    if (option2 == 0) {
+        newOpt("./assets/bandit/banditOption2.webp", "Serated Dagger")
+    } else if (option2 == 1) {
+        newOpt("./assets/bandit/banditOption2Alt.webp", "Serated Shiv")
+    }
+    if (option3 == 0) {
+        newOpt("./assets/bandit/banditOption3.webp", "Lights Out")
+    } else if (option3 == 1) {
+        newOpt("./assets/bandit/banditOption3Alt.webp", "Desperado")
+    }
+}
+
+function generateCaptain() {
+    clear()
+    newProfile("./assets/captain/captainProfile.webp", "Captain")
+    option = Math.floor(Math.random() * 4)
+    option2 = Math.floor(Math.random() * 4)
+    option3 = Math.floor(Math.random() * 2)
+
+    if (option == 0) {
+        newOpt("./assets/captain/captainOption.webp", "Beacon: Healing")
+    } else if (option == 1) {
+        newOpt("./assets/captain/captainOptionAlt.webp", "Beacon: Shocking")
+    } else if (option == 2) {
+        newOpt("./assets/captain/captainOptionAlt2.webp", "Beacon: Ressuply")
+    } else if (option == 3) {
+        newOpt("./assets/captain/captainOptionAlt3.webp", "Beacon: Hacking")
+    }
+    if (option2 == 0) {
+        newOpt("./assets/captain/captainOption.webp", "Beacon: Healing")
+    } else if (option2 == 1) {
+        newOpt("./assets/captain/captainOptionAlt.webp", "Beacon: Shocking")
+    } else if (option2 == 2) {
+        newOpt("./assets/captain/captainOptionAlt2.webp", "Beacon: Ressuply")
+    } else if (option2 == 3) {
+        newOpt("./assets/captain/captainOptionAlt3.webp", "Beacon: Hacking")
+    }
+    if (option3 == 0) {
+        newOpt("./assets/captain/captainOption2.webp", "Orbital Probe")
+    } else if (option3 == 1) {
+        newOpt("./assets/captain/captainOption2Alt.webp", "OGM-72 \'DIABLO\' Strike")
     }
 }
 
