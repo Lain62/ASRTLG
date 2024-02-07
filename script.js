@@ -6,8 +6,10 @@ const divProfile = document.getElementById('selected-profile')
 const divOptions = document.getElementById('selected-options')
 
 const btnAcrid = document.getElementById('acrid')
+const btnArtificer = document.getElementById('artificer')
 
 btnAcrid.addEventListener('click', generateAcrid)
+btnArtificer.addEventListener('click', generateArtificer)
 
 function generateAcrid() {
     clear()
@@ -30,6 +32,30 @@ function generateAcrid() {
         newOpt("./assets/acrid/acridOption3.webp", "Caustic Leap")
     } else if (option3 == 1) {
         newOpt("./assets/acrid/acridOption3Alt.webp", "Frenzied Leap")
+    }
+}
+
+function generateArtificer() {
+    clear()
+    newProfile("./assets/artificer/artificerProfile.webp", "artificer")
+    option = Math.floor(Math.random() * 2)
+    option2 = Math.floor(Math.random() * 2)
+    option3 = Math.floor(Math.random() * 2)
+
+    if (option == 0) {
+        newOpt("./assets/artificer/artificerOption.webp", "Flame Bolt")
+    } else if (option == 1) {
+        newOpt("./assets/artificer/artificerOptionAlt.webp", "Plasma Bolt")
+    }
+    if (option2 == 0) {
+        newOpt("./assets/artificer/artificerOption2.webp", "Charged Nano-Bomb")
+    } else if (option2 == 1) {
+        newOpt("./assets/artificer/artificerOption2Alt.webp", "Cast Nano-Spear")
+    }
+    if (option3 == 0) {
+        newOpt("./assets/artificer/artificerOption3.webp", "Flamethrower")
+    } else if (option3 == 1) {
+        newOpt("./assets/artificer/artificerOption3Alt.webp", "Ion Surge")
     }
 }
 
