@@ -13,6 +13,8 @@ const btnCommando = document.getElementById('commando')
 const btnEngineer = document.getElementById('engineer')
 const btnHuntress = document.getElementById('huntress')
 const btnLoader = document.getElementById('loader')
+const btnMercenary = document.getElementById('mercenary')
+const btnMult = document.getElementById('mult')
 
 btnAcrid.addEventListener('click', generateAcrid)
 btnArtificer.addEventListener('click', generateArtificer)
@@ -22,6 +24,8 @@ btnCommando.addEventListener('click', generateCommando)
 btnEngineer.addEventListener('click', generateEngineer)
 btnHuntress.addEventListener('click', generateHuntress)
 btnLoader.addEventListener('click', generateLoader)
+btnMercenary.addEventListener('click', generateMercenary)
+btnMult.addEventListener('click', generateMult)
 
 function generateAcrid() {
     clear()
@@ -220,6 +224,62 @@ function generateLoader() {
         newOpt("./assets/loader/loaderOption3.webp", "M551 Pylon")
     } else if (option3 == 1) {
         newOpt("./assets/loader/loaderOption3Alt.webp", "Thunderslam")
+    }
+}
+
+function generateMercenary() {
+    clear()
+    newProfile("./assets/mercenary/mercenaryProfile.webp", "Mercenary")
+    option = Math.floor(Math.random() * 2)
+    option2 = Math.floor(Math.random() * 2)
+    option3 = Math.floor(Math.random() * 2)
+
+    if (option == 0) {
+        newOpt("./assets/mercenary/mercenaryOption.webp", "Whirlwind")
+    } else if (option == 1) {
+        newOpt("./assets/mercenary/mercenaryOptionAlt.webp", "Rising Thunder")
+    }
+    if (option2 == 0) {
+        newOpt("./assets/mercenary/mercenaryOption2.webp", "Blinding Assault")
+    } else if (option2 == 1) {
+        newOpt("./assets/mercenary/mercenaryOption2Alt.webp", "Focused Assault")
+    }
+    if (option3 == 0) {
+        newOpt("./assets/mercenary/mercenaryOption3.webp", "Eviscerate")
+    } else if (option3 == 1) {
+        newOpt("./assets/mercenary/mercenaryOption3Alt.webp", "Slicing Winds")
+    }
+}
+
+function generateMult() {
+    clear()
+    newProfile("./assets/mult/multProfile.webp", "mult")
+    option = Math.floor(Math.random() * 4)
+    option2 = Math.floor(Math.random() * 4)
+    option3 = Math.floor(Math.random() * 2)
+
+    if (option == 0) {
+        newOpt("./assets/mult/multOption.webp", "Auto-Nailgun")
+    } else if (option == 1) {
+        newOpt("./assets/mult/multOptionAlt.webp", "Rebar Puncher")
+    } else if (option == 2) {
+        newOpt("./assets/mult/multOptionAlt2.webp", "Scrap Launcher")
+    } else if (option == 3) {
+        newOpt("./assets/mult/multOptionAlt3.webp", "Power-Saw")
+    }
+    if (option2 == 0) {
+        newOpt("./assets/mult/multOption.webp", "Auto-Nailgun")
+    } else if (option2 == 1) {
+        newOpt("./assets/mult/multOptionAlt.webp", "Rebar Puncher")
+    } else if (option2 == 2) {
+        newOpt("./assets/mult/multOptionAlt2.webp", "Scrap Launcher")
+    } else if (option2 == 3) {
+        newOpt("./assets/mult/multOptionAlt3.webp", "Power-Saw")
+    }
+    if (option3 == 0) {
+        newOpt("./assets/mult/multOption2.webp", "Retool")
+    } else if (option3 == 1) {
+        newOpt("./assets/mult/multOption2Alt.webp", "Power Mode")
     }
 }
 
