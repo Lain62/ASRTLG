@@ -5,66 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A Simple RoR 2 Loadout Generator</title>
     <link rel="stylesheet" href="./style.css">
-    <script src="./scripts.js"></script>
+    <script src="./script.js" defer></script>
     <link rel="shortcut icon" href="./assets/icon.png" type="image/x-icon">
 </head>
 <body>
-    <div id="cont-title" class="container">
+    <div class="container" id="title-container">
         <h1 id="title">A Simple RoR 2 Loadout Generator</h1>
     </div>
-    <div id="cont-chars" class="container">
-        <div id="cont-chars-title">
-            <h1 id="title">Select A Character</h1>
+    <div id="container-2">
+        <div id="chars" class="container">
+            <div id="chars-title">
+                <h1>Select A Character</h1>
+            </div>
+            <div id="chars-select">
+                <button type="button" class="chars-select-button" id="random" ><img class="char" src="./assets/placeholder.png" alt="placeholder"></button>
+                <button type="button" class="chars-select-button" id="acrid" ><img class="char" src="./assets/acrid/acridProfile.webp" alt="placeholder"></button>
+                <button type="button" class="chars-select-button" id="artificer" ><img class="char" src="./assets/artificer/artificerProfile.webp" alt="placeholder"></button>
+                <button type="button" class="chars-select-button" id="bandit" ><img class="char" src="./assets/bandit/banditProfile.webp" alt="placeholder"></button>
+                <button type="button" class="chars-select-button" id="captain" ><img class="char" src="./assets/captain/captainProfile.webp" alt="placeholder"></button>
+                <button type="button" class="chars-select-button" id="commando" ><img class="char" src="./assets/commando/commandoProfile.webp" alt="placeholder"></button>
+                <button type="button" class="chars-select-button" id="engineer" ><img class="char" src="./assets/engineer/engineerProfile.webp" alt="placeholder"></button>
+                <button type="button" class="chars-select-button" id="huntress" ><img class="char" src="./assets/huntress/huntressProfile.webp" alt="placeholder"></button>
+                <button type="button" class="chars-select-button" id="loader" ><img class="char" src="./assets/loader/loaderProfile.webp" alt="placeholder"></button>
+                <button type="button" class="chars-select-button" id="mercenary" ><img class="char" src="./assets/mercenary/mercenaryProfile.webp" alt="placeholder"></button>
+                <button type="button" class="chars-select-button" id="mult" ><img class="char" src="./assets/mult/multProfile.webp" alt="placeholder"></button>
+                <button type="button" class="chars-select-button" id="railgunner" ><img class="char" src="./assets/placeholder.png" alt="placeholder"></button>
+                <button type="button" class="chars-select-button" id="rex" ><img class="char" src="./assets/placeholder.png" alt="placeholder"></button>
+                <button type="button" class="chars-select-button" id="voidfiend" ><img class="char" src="./assets/placeholder.png" alt="placeholder"></button>
+            </div>
         </div>
-        <div id="cont-chars-select">
-            <img id="random" class="char" src="./assets/placeholder.png" alt="placeholder">
-            <img id="acrid" class="char" src="./assets/acrid/acridProfile.webp" alt="placeholder">
-            <img id="artificer" class="char" src="./assets/artificer/artificerProfile.webp" alt="placeholder">
-            <img id="bandit" class="char" src="./assets/bandit/banditProfile.webp" alt="placeholder">
-            <img id="captain" class="char" src="./assets/captain/captainProfile.webp" alt="placeholder">
-            <img id="commando" class="char" src="./assets/commando/commandoProfile.webp" alt="placeholder">
-            <img id="engineer" class="char" src="./assets/engineer/engineerProfile.webp" alt="placeholder">
-            <img id="huntress" class="char" src="./assets/huntress/huntressProfile.webp" alt="placeholder">
-            <img id="loader" class="char" src="./assets/loader/loaderProfile.webp" alt="placeholder">
-            <img id="mercenary" class="char" src="./assets/mercenary/mercenaryProfile.webp" alt="placeholder">
-            <img id="mult" class="char" src="./assets/mult/multProfile.webp" alt="placeholder">
-            <img id="railgunner" class="char" src="./assets/placeholder.png" alt="placeholder">
-            <img id="rex" class="char" src="./assets/placeholder.png" alt="placeholder">
-            <img id="voidfiend" class="char" src="./assets/placeholder.png" alt="placeholder">
-        </div>
-    </div>
-
-    <div id="cont-select" class="container">
-        <div id="cont-char-select">
-            <img src="./assets/placeholder.png" alt="Character Selected" id="char-select-img">
-            <h1 id="label-char-select">Character</h1>
-        </div>
-        <div id="cont-char-abilites">
-            <div class="cont-ability" id="cont-passive">
-                <img id="img-passive" class="img-ability" src="./assets/placeholder.png" alt="Character Passive">
-                <h1 class="label-ability" id="label-passive">passive</h1>
+    
+        <div id="selected" class="container">
+            <div id="selected-profile">
+                <!-- <img src="./assets/placeholder.png" alt="Character Selected" class="selected-profile-img">
+                <h1 class="selected-profile-label">Character</h1> -->
             </div>
-            <div class="cont-ability" id="cont-primary">
-                <img id="img-primary" class="img-ability" src="./assets/placeholder.png" alt="Character Primary">
-                <h1 class="label-ability" id="label-primary">primary</h1>
+            <div id="selected-options">
+                <div class="selected-option">
+                    <!-- <img src="./assets/placeholder.png" alt="Option" class="selected-option-img">
+                    <p class="selected-option-label">Character</p>  -->
+                </div>
             </div>
-            <div class="cont-ability" id="cont-secondary">
-                <img id="img-secondary" class="img-ability" src="./assets/placeholder.png" alt="Character Secondary">
-                <h1 class="label-ability" id="label-secondary">secondary</h1>
-            </div>
-            <div class="cont-ability" id="cont-utility">
-                <img id="img-utility" class="img-ability" src="./assets/placeholder.png" alt="Character Utility">
-                <h1 class="label-ability" id="label-utility">utility</h1>
-            </div>
-            <div class="cont-ability" id="cont-special">
-                <img id="img-special" class="img-ability" src="./assets/placeholder.png" alt="Character Special">
-                <h1 class="label-ability" id="label-special">special</h1>
-            </div>
-            
-            
-            
-            
-            
         </div>
     </div>
 </body>
