@@ -53,7 +53,7 @@ function generateAcrid() {
 
 function generateArtificer() {
     clear()
-    newProfile("./assets/artificer/ArtificerProfile.webp", "Artificer")
+    newProfile("./assets/artificer/artificerProfile.webp", "Artificer")
     option = Math.floor(Math.random() * 2)
     option2 = Math.floor(Math.random() * 2)
     option3 = Math.floor(Math.random() * 2)
